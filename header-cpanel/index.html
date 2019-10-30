@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Mainheader</title>
+
+    <style>
+      body {
+        background-color: rgb(58, 54, 54);
+      }
+      .Mainheader {
+        border: 3px solid blue;
+        height: 80px;
+        display: grid;
+        grid-template-columns: 80px 2fr 2fr 2fr 1fr 1fr 0.5fr;
+        grid-template-areas: ". translate . .  companyName nameUser notification";
+      }
+
+      @media (min-width: 600px) {
+        body {
+          background-color: yellow;
+        }
+        .Mainheader {
+          grid-template-columns: 50% 50%;
+          grid-template-areas: " translate notification ";
+        }
+
+        .item {
+          display: none;
+        }
+      }
+
+      .translate {
+        grid-area: translate;
+        background-color: firebrick;
+      }
+      .companyName {
+        grid-area: companyName;
+        background-color: blue;
+      }
+      .nameUser {
+        grid-area: nameUser;
+        background-color: darkorange;
+      }
+      .notification {
+        grid-area: notification;
+        background-color: cadetblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="Mainheader">
+      <div class="translate"></div>
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+
+      <div class="companyName"></div>
+      <div class="nameUser"></div>
+      <div class="notification"></div>
+    </div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam fugiat
+      aliquam totam reiciendis est exercitationem vero, eaque, aspernatur
+      voluptatem nihil, qui quod possimus deserunt eligendi veniam vitae.
+      Fugiat, adipisci dignissimos.
+    </p>
+  </body>
+</html>
